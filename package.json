@@ -1,0 +1,18 @@
+{
+  "name": "poomsem-gpt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "langchain": "^0.1.14",
+    "next": "14.1.4",
+    "openai": "^4.28.4",
+    "pinecone-client": "^3.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
