@@ -19,19 +19,16 @@ export async function POST(req: Request) {
   const results = await vectorStore.similaritySearch(question, 3);
 
   const model = new OpenAI({ openAIApiKey: openaiApiKey, temperature: 0 });
-  const res = await model.call(
-    `다음 품셈 항목 정보를 참고하여 질문에 답하세요:
 
-${results
-      .map((r) => r.pageContent)
-      .join("
+  const res = await model.call(`
+다음 품셈 항목 정보를 참고하여 질문에 답하세요:
 
-")}
+${results.map((r) => r.pageContent).join("\n\n")}
 
 질문: ${question}
 
-답변:`
-  );
+답변:
+  `);
 
   return NextResponse.json({ answer: res });
 }
