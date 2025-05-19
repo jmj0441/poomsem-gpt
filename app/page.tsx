@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-export default function Home() {
-  return (
-    <main>
-      <h1>품셈 챗봇</h1>
-      <p>여기에 챗봇 인터페이스가 들어갑니다.</p>
-    </main>
-  );
-}
-=======
 'use client'
 import { useState } from "react";
 
@@ -58,4 +48,3 @@ export default function Home() {
     </main>
   );
 }
->>>>>>> ff2d3d7acf364cc48a908005fbc51a5ffe040f5e
